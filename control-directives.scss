@@ -1,0 +1,66 @@
+/* @if
+  @if 条件 {
+    ...
+  } 
+*/
+$min: 5;
+$max: 10;
+div.box {
+  @if $min > $max {
+    color: red;
+  }
+}
+$them: dark;
+body {
+  @if $them == dark {
+    color: white;
+  }
+}
+
+/* @for
+  // 包含结束值
+  @for $var from <开始值> throuth <结束值> {
+    ...
+  } 
+  // 包含结束值
+  @for $var from <开始值> to <结束值> {
+    ...
+  } 
+*/
+$rows: 3;
+@for $i from 1 through $rows {
+  div.row-#{$i} {
+    height: 20px * $i;
+  }
+}
+@for $i from 1 to $rows {
+  div.li-#{$i} {
+    height: 20px * $i;
+  }
+}
+
+/* @each
+  // 包含结束值
+  @each $var in $list {
+    ...
+  } 
+*/
+$icons: success error waring;
+@each $icon in $icons {
+  .icon-#{$icon} {
+    background-img: url(../images/icons/#{$icon}.png)
+  }
+}
+
+/* @while
+  @while 条件 {
+    ...
+  } 
+*/
+$i: 4;
+@while $i > 0 {
+  .item-#{$i} {
+    width: 5px * $i;
+  }
+  $i: $i - 1;
+}

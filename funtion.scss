@@ -1,0 +1,21 @@
+/* @function
+  @function 名称 (参数1, 参数2 ...) {
+    ...
+  }
+ */
+@function add5 ($number) {
+  @return $number + 5
+}
+.box {
+  padding: add5(5px);
+}
+
+@function add5 ($number) {
+  @if type-of($number) == number {
+    @return $number + 5
+  }
+  @warn "#{$number}不是数字"
+}
+.box {
+  padding: add5(5px);
+}

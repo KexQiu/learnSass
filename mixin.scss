@@ -1,0 +1,33 @@
+/*
+  定义：
+    @mixin 名称 ( 参数1， 参数2... ) { // 不使用参数可以省略。
+      ...
+    }
+
+  使用：
+    @include 名称;
+*/
+
+@mixin default-border {
+  border: 1px black solid;
+  border-radius: 5px;
+  ul li {
+    list-style: none;
+  }
+}
+@mixin set-pm($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+}
+
+div.box{
+  @include default-border;
+  // 赋值时要注意顺序，对应着定义时的顺序
+  @include set-pm(10px 5px, 5px 10px);
+  font-size: 16px;
+}
+
+div.footer {
+  // 但是如果赋值时注明参数名则可以不太在意顺序
+  @include set-pm($margin: 10px 5px, $padding: 5px 10px);
+}

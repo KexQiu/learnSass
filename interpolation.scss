@@ -1,0 +1,15 @@
+// 在值中使用
+$border-color: 'black';
+$border: '1px #{border-color} solid';
+
+// 在选择器中使用
+$class: text;
+div.#{$class} {
+  font-size: 40px;
+}
+
+// 在属性名中使用
+$name: size;
+div.top {
+  font-#{$name}: 40px;
+}

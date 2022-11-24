@@ -1,0 +1,5 @@
+$boolean1: 5px > 10px; // false
+$boolean2: 5px < 10px; // true
+$boolean3: (5px > 10px) and (5px < 7px); // false and相当于与
+$boolean4: (5px > 10px) or (5px < 7px); // true or相当于或
+$boolean5: not(5px > 10px); // true not会对括号里的内容去反

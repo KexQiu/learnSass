@@ -1,0 +1,15 @@
+$color1: #000000;
+$color2: #000;
+$color3: black;
+$color4: rgb(0, 0, 0);
+$color5: rgba(0, 0, 0, 0);
+$color6: hsl(0, 0%, 0);
+$color7: hsla(0, 0%, 0, 0);
+
+$colorFn: adjust-hue($color1, 137deg); // 可以调整一个颜色的色相。
+$colorFn: lighten(#555555, 30%); // 让一个颜色更加亮
+$colorFn: darken(#555555, 30%); // 让一个颜色更加暗
+$colorFn: saturate(#555555, 30%); // 增加一个颜色的饱和度
+$colorFn: desaturate(#555555, 30%); // 减少一个颜色的饱和度
+$colorFn: opacify(#555555, 0.3); // 增加一个颜色的不透明度
+$colorFn: transparentize(#555555, 0.3); // 增加一个颜色的透明度

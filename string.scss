@@ -1,0 +1,12 @@
+$string1: xiong + "kai";// "xiongkai"
+$string2: xiong + kai;// xiongkai  
+$string3: "xiongkai" + 666;// "xiongkai666"
+$string4: xiong - kai;// "xiong-kai"
+$string5: xiong / kai;// "xiong/kai"  
+$string6: xiong * kai;// 会报错，因为两个字符串相乘没有意义  
+
+$stringFn1: to-upper-case("xiongkai");// XIONGKAI 将字符串全部变为大写
+$stringFn2: to-lower-case("XIONGKAI");// xiongkai 将字符串全部变为小写
+$stringFn3: str-length(xiongkai);// 8 返回一个字符串的长度 
+$stringFn4: str-index(xiongkai, kai);// 6 返回第二个参数在第一个参数中第一次出现的索引 
+$stringFn5: str-insert(xiong666, kai, 6 );// xiongkai666 将第二个参数插入到第一参数的指定位置中，制定的位置是第三个参数

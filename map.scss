@@ -1,0 +1,10 @@
+// $map: (key1: value1, key2: value2 ...);
+
+$map: (font-size: 14px, font-weight: 500);
+
+$mapFn1: map-get($map, font-size ); // 14px 返回一个map的制定key的值
+$mapFn2: map-keys($map); // ("font-size", "font-weight")  返回一个map的所有key
+$mapFn3: map-values($map); // (14px, 500)  返回一个map的所有value
+$mapFn4: map-has-key($map, font-size); // true 返回一个map是否拥有制定key的值
+$mapFn5: map-merge($map, (color: red)); // (font-size: 14px, font-weight: 500, color: red)  返回两个map合并的结果
+$mapFn6: map-remove($map, font-weight); // (font-size: 14px)  返回指定map移除制定key后的结果

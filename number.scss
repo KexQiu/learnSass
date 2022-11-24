@@ -1,0 +1,21 @@
+$number1: 2 + 8; // 10
+$number2: 2 * 8;// 16
+$number3: 8 / 2;// 8/2 并不会直接得到4，因为css样式中会有这样的值 例如 font-size: 16px/1.8;  16px是字号，1.8为行间距
+$number4: (8 / 2);// 4 使用括号包裹可以得到结果
+$number5: 5px + 5px;// 10px
+$number6: 5px - 2;// 3px
+$number7: 5px * 2;// 10px
+$number8: 5px * 2px;// 10px*px 这点需要注意，而且px*px不是有效的单位，会导致样式失效
+$number9: (10px / 2px);// 5 单位也会消失
+$number10: (10px / 2);// 5px
+$number11: 3 + 2 * 5px;// 13px 算法顺序和正常数学运算一样先乘除后加减
+$number12: (3 + 2) * 5px ;// 25px 用括号包裹会先运算
+
+$numberFn1: abs(-3);// 3 返回一个数字的绝对值 
+$numberFn2: round(3.5);// 4 对一个小数进行四舍五入 
+$numberFn3: round(3.4);// 3
+$numberFn4: ceil(3.3);// 4 对一个小数进行向上取整 
+$numberFn5: floor(3.7);// 3 对一个小数进行向下取整 
+$numberFn6: percentage(650px / 1000px);// 可以得到一个百分比形式的值
+$numberFn7: min(1,2,3);// 1 取出给的数中最小的数 
+$numberFn8: max(1,2,3);// 3 取出给的数中最大的数 

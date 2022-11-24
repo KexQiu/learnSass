@@ -1,0 +1,17 @@
+.box {
+  padding: 15px;
+
+  ul li {
+    list-style: none;
+  }
+}
+
+.box a {
+  font-weight: 700;
+}
+
+.content {
+  background-color: blue;
+  @extend .box;
+  // 会继承.box下的所有样式
+}

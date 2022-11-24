@@ -1,0 +1,49 @@
+// CSS
+div {
+  background-color: red;
+}
+
+div .box-top {
+  background-color: green;
+}
+
+div .box-top.nav {
+  color: red;
+}
+
+div .box-top ul li {
+  list-style: none;
+}
+
+div .box-bottom {
+  background-color: yellow;
+  border: 1px black solid;
+  border-right: 0;
+  border-left: 0;
+}
+
+// SCSS
+div {
+  background-color: red;
+  .box {
+    // 相同的前缀可以提出来并使用&进行拼接，&符会引用父级的选择器
+    &-top {
+      background-color: green;
+      // 多个类名同样可以进行拼接
+      &.nav {
+        color: red
+      }
+      ul li {
+        list-style: none;
+      }
+    }
+    &-bottom {
+      background-color: yellow;
+      // 就连属性名有相同前缀的也可以进行嵌套
+      border: 1px black solid {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}

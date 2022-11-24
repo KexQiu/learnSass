@@ -1,0 +1,9 @@
+$list1: 1px black solid;
+$list2: 2px 3px, 4px 5px; // 这个列表包含了两个列表
+$list3: (2px 3px) (4px 5px); // 这个列表也包含了两个列表
+
+$listFn1: length(5px 10px); // 2 返回一个列表的长度
+$listFn2: nth(5px 10px, 1); // 5px 返回一个列表指定索引的值
+$listFn3: index(1px solid red, solid); // 2 返回一个列表中指定值的索引
+$listFn4: append(5px 10px, 5px 0); // 5px 10px 5px 0  将第二个参数添加到第一个参数后面，并返回结果
+$listFn5: append(5px 10px, 5px 0, comma); // 还可以添加第三个参数，用于自定义列表的分隔符

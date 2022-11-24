@@ -1,0 +1,15 @@
+/*
+  定义：
+    $变量名: 变量值;
+
+  使用：
+    属性: $变量名;
+*/
+$color: #000000;
+$border: 1px $color solid;
+$font-size: 14px;
+
+div.box {
+  border: $boder;
+  font-size: $font-size;
+}
